@@ -31,7 +31,10 @@
                 </ul>
 
                 <div class="flex gap-2">
-                    <a href="./login.html" class="btn text-sm">ورود / ثبت‌نام</a>
+<!--                    <a href="./login.html" class="btn text-sm">ورود / ثبت‌نام</a>-->
+                    <a href="./profile/profile.html" class="p-1 block rounded-full border border-gray-300 size-12">
+                        <img src="./assets/img/aziziUI.png" alt="" class="w-full rounded-full">
+                    </a>
                 </div>
             </div>
         </div>
@@ -120,14 +123,14 @@
             </a>
         </div>
 
-        <div class="px-6 py-4 flex justify-start border-b border-gray-200 bg-gray-50/30">
-            <button class="px-4 py-2.5 rounded-r-lg text-sm font-semibold text-blue-600 border border-gray-200 bg-blue-50 transition">
+        <div class="px-4 md:px-6 py-4 flex justify-start border-b border-gray-200 bg-gray-50/30">
+            <button class="px-3 md:px-4 py-2.5 rounded-r-lg text-sm font-semibold text-blue-600 border border-gray-200 bg-blue-50 transition">
                 جدیدترین
             </button>
-            <button class="px-4 py-2.5 text-sm font-semibold text-gray-500 border border-gray-200 bg-white hover:bg-gray-100 transition">
+            <button class="px-3 md:px-4 py-2.5 text-sm font-semibold text-gray-500 border border-gray-200 bg-white hover:bg-gray-100 transition">
                 آخرین معاملات
             </button>
-            <button class="px-4 py-2.5 rounded-l-lg text-sm font-semibold text-gray-500 border border-gray-200 bg-white hover:bg-gray-100 transition">
+            <button class="px-3 md:px-4 py-2.5 rounded-l-lg text-sm font-semibold text-gray-500 border border-gray-200 bg-white hover:bg-gray-100 transition">
                 ارزان‌ترین
             </button>
 
@@ -137,10 +140,10 @@
             <table class="w-full text-right border-collapse min-w-185">
                 <thead>
                 <tr class="text-gray-400 bg-gray-50 font-medium text-xs">
-                    <th class="px-6 py-4 text-right">وام</th>
-                    <th class="px-6 py-4 text-right">قیمت</th>
-                    <th class="px-6 py-4 text-right">بهره</th>
-                    <th class="px-6 py-4 text-center"></th>
+                    <th class="px-4 md:px-6 py-4 text-right">وام</th>
+                    <th class="px-4 md:px-6 py-4 text-right">قیمت</th>
+                    <th class="px-4 md:px-6 py-4 text-right">بهره</th>
+                    <th class="px-4 md:px-6 py-4 text-center"></th>
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
@@ -149,22 +152,22 @@
                     document.write(rows.map(() => `
                             <tr class="hover:bg-blue-50/30 transition-colors">
                             <a href="/" class="flex">
-                                <td class="px-6 py-4">
+                                <td class="px-3 md:px-6 py-3 md:py-4">
                                 <a href="/" class="flex">
                                     <div class="flex items-center gap-3">
-                                        <div class="size-10 flex items-center justify-center overflow-hidden">
-                                            <img src="./assets/img/Shahr.png" alt="Shahr" />
+                                        <div class="size-6 md:size-10 flex items-center justify-center overflow-hidden">
+                                            <img src="./assets/img/Shahr.png" alt="Shahr" class="w-full" />
                                         </div>
                                         <div>
-                                            <div class="text-gray-900 font-semibold text-base">۵۰۰,۰۰۰,۰۰۰ <small class="text-sm text-gray-700 font-normal">تومان</small></div>
-                                            <div class="text-gray-500 font-normal text-sm mt-1">اقساط ۱۲ ماهه</div>
+                                            <div class="text-gray-900 font-semibold text-sm md:text-base">۵۰۰,۰۰۰,۰۰۰ <small class="text-xs md:text-sm text-gray-700 font-normal">تومان</small></div>
+                                            <div class="text-gray-500 font-normal text-xs md:text-sm mt-1">اقساط ۱۲ ماهه</div>
                                         </div>
                                     </div>
                                     </a>
                                 </td>
-                                <td class="px-6 py-4 text-right">
+                                <td class="px-3 md:px-6 py-3 md:py-4 text-right">
                                 <a href="/" class="flex">
-                                    <span class="text-gray-800 font-bold text-base">۳,۹۰۰,۰۰۰ <small class="text-sm text-gray-700 font-normal">تومان</small></span>
+                                    <span class="text-gray-800 font-bold text-sm md:text-base">۳,۹۰۰,۰۰۰ <small class="text-xs md:text-sm text-gray-700 font-normal">تومان</small></span>
                                     </a>
                                 </td>
                                 <td class="px-6 py-4">
