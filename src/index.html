@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/output.css" rel="stylesheet">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/countMe.min.js"></script>
     <title>وام جو</title>
 </head>
 <body class="bg-white text-gray-800 relative">
-
+<section class="bg-orange-200 w-full px-3 py-2">
+    <span class="text-gray-700 text-sm">بنر تست قیمت کوفت و زهرمار</span>
+</section>
 <header class="bg-blue-50">
     <nav class="px-3 py-4.5">
         <div class="container mx-auto">
@@ -30,8 +34,8 @@
                     </li>
                 </ul>
 
-                <div class="flex gap-2">
-<!--                    <a href="./login.html" class="btn text-sm">ورود / ثبت‌نام</a>-->
+                <div class="hidden md:flex gap-2">
+                    <!--                    <a href="./login.html" class="btn text-sm">ورود / ثبت‌نام</a>-->
                     <a href="./profile/profile.html" class="p-1 block rounded-full border border-gray-300 size-12">
                         <img src="./assets/img/aziziUI.png" alt="" class="w-full rounded-full">
                     </a>
@@ -41,7 +45,7 @@
     </nav>
 
     <section class="py-16 text-blue-600 px-3 flex">
-        <div class="container flex flex-col items-center justify-center mx-auto max-md:pt-8 py-24">
+        <div class="max-w-3xl flex flex-col items-center justify-center mx-auto max-md:pt-8 py-24">
             <div class="inline-flex items-center justify-center gap-2 pl-1 pr-2 py-1 bg-blue-100 rounded-full">
                 <span class="text-blue-700 text-sm flex items-center justify-center gap-1 hover:gap-2 transition-all font-medium">
                     <svg class="size-3.5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -62,48 +66,59 @@
 </header>
 
 <nav class="block md:hidden py-2 bottom-shadow px-3 bg-white fixed bottom-0 left-0 w-full z-10">
-    <ul class="flex md:hidden flex-row justify-between items-center text-sm font-semibold text-gray-400">
-        <li class="flex">
-            <a href="./loan/loan.html" class="px-1 py-1 flex flex-col items-center gap-2">
-                <span class="px-4 py-2 rounded-lg bg-blue-600">
-                    <svg class="size-5 text-gray-100"
-                         xmlns="http://www.w3.org/2000/svg"
-                         viewBox="0 0 512 512">
-                        <path fill="currentColor"
-                              d="M240 6.1c9.1-8.2 22.9-8.2 32 0l232 208c9.9 8.8 10.7 24 1.8 33.9s-24 10.7-33.9 1.8l-8-7.2 0 205.3c0 35.3-28.7 64-64 64l-288 0c-35.3 0-64-28.7-64-64l0-205.3-8 7.2c-9.9 8.8-25 8-33.9-1.8s-8-25 1.8-33.9L240 6.1zm16 50.1L96 199.7 96 448c0 8.8 7.2 16 16 16l48 0 0-104c0-39.8 32.2-72 72-72l48 0c39.8 0 72 32.2 72 72l0 104 48 0c8.8 0 16-7.2 16-16l0-248.3-160-143.4zM208 464l96 0 0-104c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24l0 104z"/>
+    <ul class="flex md:hidden flex-row justify-between items-center text-xs font-semibold text-gray-400">
+        <li class="bottom-nav bottom-nav-active">
+            <a href="./loan/loan.html">
+                <span>
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path d="M48 267.7c2-1.2 4-2.6 5.8-4.3L256 75.7 458.2 263.4c1.8 1.7 3.7 3.1 5.8 4.3L464 448c0 35.3-28.7 64-64 64l-288 0c-35.3 0-64-28.7-64-64l0-180.3z"/>
+                        <path d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-13 12-13.7 32.3-1.7 45.2s32.3 13.7 45.2 1.7L256 75.7 458.2 263.4c13 12 33.2 11.3 45.2-1.7s11.3-33.2-1.7-45.2L464 181.5 464 80c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32l0 12.3-90.2-83.8z"/>
                     </svg>
-                    </span>
-                <span class="text-gray-600">وام ها</span>
+                </span>
+                <span>وام ها</span>
             </a>
         </li>
-        <li class="flex">
-            <a href="./loan/loan.html" class="px-1 py-1 flex flex-col items-center gap-2">
-                <span class="px-4 py-2 rounded-lg">
-                    <svg class="size-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path fill="currentColor"
-                              d="M64 48l112 0 0 88c0 39.8 32.2 72 72 72l88 0 0 240c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16zM224 67.9l92.1 92.1-68.1 0c-13.3 0-24-10.7-24-24l0-68.1zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-261.5c0-17-6.7-33.3-18.7-45.3L242.7 18.7C230.7 6.7 214.5 0 197.5 0L64 0zM192 240c-13.3 0-24 10.7-24 24l0 48-48 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0 0 48c0 13.3 10.7 24 24 24s24-10.7 24-24l0-48 48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0 0-48c0-13.3-10.7-24-24-24z"/></svg>
-                    </span>
-                <span class="text-gray-400">ثبت نام</span>
+        <li class="bottom-nav">
+            <a href="./loan/loan.html">
+                <span>
+                  <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                      <path d="M0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-277.5c0-17-6.7-33.3-18.7-45.3L258.7 18.7C246.7 6.7 230.5 0 213.5 0L64 0C28.7 0 0 28.7 0 64zM96 336c0-13.3 10.7-24 24-24l48 0 0-48c0-13.3 10.7-24 24-24s24 10.7 24 24l0 48 48 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-48 0 0 48c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-48-48 0c-13.3 0-24-10.7-24-24zM208 58.5L325.5 176 232 176c-13.3 0-24-10.7-24-24l0-93.5z"/>
+                      <path d="M216 264c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 48-48 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0 0 48c0 13.3 10.7 24 24 24s24-10.7 24-24l0-48 48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0 0-48z"/>
+                  </svg>
+                </span>
+                <span>ثبت نام</span>
             </a>
         </li>
-        <li class="flex">
-            <a href="./loan/loan.html" class="px-1 py-1 flex flex-col items-center gap-2">
-                <span class="px-4 py-2 rounded-lg">
-                    <svg class="size-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path fill="currentColor"
-                              d="M288 0c13.3 0 24 10.7 24 24l0 8 16 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-61.7 0c-5.7 0-10.3 4.6-10.3 10.3 0 5.1 3.8 9.4 8.8 10.2L318 108c28.7 4.1 50 28.7 50 57.7 0 31.4-24.9 57-56 58.2l0 8c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-8-24 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l69.7 0c5.7 0 10.3-4.6 10.3-10.3 0-5.1-3.8-9.4-8.8-10.2L258 148c-28.7-4.1-50-28.7-50-57.7 0-31.4 24.9-57 56-58.2l0-8c0-13.3 10.7-24 24-24zM187.4 336c-7.9 0-15.6 2.3-22.2 6.7L85.3 396c-3.9 2.6-8.6 4-13.3 4l-48 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l40.7 0 73.8-49.2C153 293.1 170 288 187.4 288L320 288c35.3 0 64 28.7 64 64 0 5.5-.7 10.9-2 16l10.6 0 69.9-47.9c33.5-23 79.4-12.9 100.3 21.9 19.2 32 10.1 73.5-20.7 94.5L462 491.1c-19.9 13.6-43.5 20.9-67.6 20.9L24 512c-13.3 0-24-10.7-24-24s10.7-24 24-24l370.4 0c14.5 0 28.6-4.4 40.6-12.5L515 396.9c9.9-6.7 12.8-20 6.6-30.2-6.7-11.1-21.3-14.3-32-7l-76 52.1c-4 2.7-8.7 4.2-13.6 4.2l-144 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-132.6 0z"/></svg>
-                    </span>
-                <span class="text-gray-400">درخواست وام</span>
+        <li class="bottom-nav">
+            <a href="./loan/loan.html">
+                <span>
+                  <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                      <path d="M0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-277.5c0-17-6.7-33.3-18.7-45.3L258.7 18.7C246.7 6.7 230.5 0 213.5 0L64 0C28.7 0 0 28.7 0 64zM96 336c0-13.3 10.7-24 24-24l48 0 0-48c0-13.3 10.7-24 24-24s24 10.7 24 24l0 48 48 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-48 0 0 48c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-48-48 0c-13.3 0-24-10.7-24-24zM208 58.5L325.5 176 232 176c-13.3 0-24-10.7-24-24l0-93.5z"/>
+                      <path d="M216 264c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 48-48 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l48 0 0 48c0 13.3 10.7 24 24 24s24-10.7 24-24l0-48 48 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-48 0 0-48z"/>
+                  </svg>
+                </span>
+                <span>ثبت نام</span>
             </a>
         </li>
-        <li class="flex">
-            <a href="./loan/loan.html" class="px-1 py-1 flex flex-col items-center gap-2">
-                <span class="px-4 py-2 rounded-lg">
-                    <svg class="size-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path fill="currentColor"
-                              d="M144 128a80 80 0 1 1 160 0 80 80 0 1 1 -160 0zm208 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM48 480c0-70.7 57.3-128 128-128l96 0c70.7 0 128 57.3 128 128l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8c0-97.2-78.8-176-176-176l-96 0C78.8 304 0 382.8 0 480l0 8c0 13.3 10.7 24 24 24s24-10.7 24-24l0-8z"/></svg>
-                    </span>
-<!--                <span class="text-gray-400">پروفایل</span>-->
+        <li class="bottom-nav">
+            <a href="./loan/loan.html">
+                <span>
+                    <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path d="M0 416l0 64c0 17.7 14.3 32 32 32l320.5 0c29 0 57.3-9.3 80.7-26.5l126.6-93.3c17.8-13.1 21.6-38.1 8.5-55.9s-38.1-21.6-55.9-8.5L392.6 416 280 416c-13.3 0-24-10.7-24-24s10.7-24 24-24l72 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-152.2 0c-33.9 0-66.5 13.5-90.5 37.5L66.7 384 32 384c-17.7 0-32 14.3-32 32z"/>
+                        <path d="M264 0c-13.3 0-24 10.7-24 24l0 56-56 0c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l56 0 0 56c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-56 56 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-56 0 0-56c0-13.3-10.7-24-24-24L264 0z"/>
+                    </svg>
+                </span>
+                <span>درخواست وام</span>
+            </a>
+        </li>
+        <li class="bottom-nav">
+            <a href="./loan/loan.html">
+                <span>
+                    <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M104 128a120 120 0 1 0 240 0 120 120 0 1 0 -240 0z"/>
+                        <path d="M16 482.3C16 383.8 95.8 304 194.3 304l59.4 0c98.5 0 178.3 79.8 178.3 178.3 0 16.4-13.3 29.7-29.7 29.7L45.7 512C29.3 512 16 498.7 16 482.3z"/>
+                    </svg>
+                </span>
                 <span class="text-gray-400">ورود</span>
             </a>
         </li>
@@ -138,53 +153,49 @@
         </div>
 
         <div class="overflow-x-auto">
-            <table class="w-full text-right border-collapse min-w-185">
-                <thead>
-                <tr class="text-gray-400 bg-gray-50 font-medium text-xs">
-                    <th class="px-4 md:px-6 py-4 text-right">وام</th>
-                    <th class="px-4 md:px-6 py-4 text-right">قیمت</th>
-                    <th class="px-4 md:px-6 py-4 text-right">بهره</th>
-                    <th class="px-4 md:px-6 py-4 text-center"></th>
-                </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100">
-                <script>
-                    const rows = Array(7).fill(0)
-                    document.write(rows.map(() => `
-                            <tr class="hover:bg-blue-50/30 transition-colors">
-                            <a href="/" class="flex">
-                                <td class="px-3 md:px-6 py-3 md:py-4">
-                                <a href="/" class="flex">
-                                    <div class="flex items-center gap-3">
-                                        <div class="size-6 md:size-10 flex items-center justify-center overflow-hidden">
-                                            <img src="./assets/img/Shahr.png" alt="Shahr" class="w-full" />
-                                        </div>
-                                        <div>
-                                            <div class="text-gray-900 font-semibold text-sm md:text-base">۵۰۰,۰۰۰,۰۰۰ <small class="text-xs md:text-sm text-gray-700 font-normal">تومان</small></div>
-                                            <div class="text-gray-500 font-normal text-xs md:text-sm mt-1">اقساط ۱۲ ماهه</div>
-                                        </div>
-                                    </div>
-                                    </a>
-                                </td>
-                                <td class="px-3 md:px-6 py-3 md:py-4 text-right">
-                                <a href="/" class="flex">
-                                    <span class="text-gray-800 font-bold text-sm md:text-base">۳,۹۰۰,۰۰۰ <small class="text-xs md:text-sm text-gray-700 font-normal">تومان</small></span>
-                                    </a>
-                                </td>
-                                <td class="px-6 py-4">
-                                    <span class="mybadge inline-flex! bg-green-100 text-green-600">۴ درصد</span>
-                                </td>
-                                <td class="px-6 py-4">
-                                <div class="flex justify-end items-center gap-4">
-                                    <button class="btn text-sm">مشاهده جزئیات</button>
-                                </div>
-                                </td>
-                             </a>
-                            </tr>
-                        `).join(''))
-                </script>
-                </tbody>
-            </table>
+            <div class="w-full mx-auto bg-white overflow-hidden">
+
+                <div class="grid grid-cols-12 bg-gray-100 px-3 py-1.5">
+                    <div class="col-span-5 md:col-span-4 lg:col-span-3">
+                        <span class="text-xs md:text-sm px-3 text-gray-500">بانک / مبلغ وام</span>
+                    </div>
+                    <div class="col-span-4 md:col-span-3 lg:col-span-3">
+                        <span class="text-xs md:text-sm px-3 text-gray-500">قیمت</span>
+                    </div>
+                    <div class="col-span-3 md:col-span-5 lg:col-span-6">
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12">
+
+                    <div class="col-span-5 md:col-span-4 lg:col-span-3 flex items-center gap-3 px-3 py-2 md:p-6">
+                        <div class="size-6 md:size-8 overflow-hidden shrink-0">
+                            <img src="./assets/img/Shahr.png" alt="Shahr" class="w-full h-full object-contain"/>
+                        </div>
+                        <div class="flex flex-col items-start">
+                            <span class="text-gray-900 font-semibold text-sm md:text-base">
+                                ۵۰۰,۰۰۰,۰۰۰ <small class="text-xs md:text-sm font-normal text-gray-700">تومان</small>
+                            </span>
+                            <span class="text-gray-500 text-xs md:text-sm mt-1">اقساط ۱۲ ماهه</span>
+                        </div>
+                    </div>
+
+                    <div class="col-span-4 md:col-span-3 lg:col-span-3 p-4 md:p-6 flex items-center gap-3">
+                        <div class="text-gray-900 font-bold text-sm md:text-base">
+                            ۳,۹۰۰,۰۰۰ <span class="text-xs md:text-sm font-normal text-gray-700">تومان</span>
+                        </div>
+                    </div>
+
+                    <div class="col-span-3 md:col-span-5 lg:col-span-6 p-4 md:p-6 flex items-center justify-end">
+                        <button class="btn px-3! py-2! text-tiny! md:text-sm!">
+                            مشاهده
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -231,19 +242,19 @@
     <div class="bg-blue-50 rounded-lg py-16">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="text-center">
-                <div class="text-6xl font-bold text-blue-600 mb-3">+۲۳</div>
+                <div id="demo1" class="text-6xl font-bold text-blue-600 mb-3">10</div>
                 <div class="text-lg font-semibold text-gray-700">فروشنده احراز شده</div>
             </div>
             <div class="text-center">
-                <div class="text-6xl font-bold text-blue-600 mb-3">+۳۴۸</div>
+                <div id="demo2" class="text-6xl font-bold text-blue-600 mb-3">20</div>
                 <div class="text-lg font-semibold text-gray-700">کاربران فعال</div>
             </div>
             <div class="text-center">
-                <div class="text-6xl font-bold text-blue-600 mb-3">۱۰۰%</div>
+                <div id="demo3" class="text-6xl font-bold text-blue-600 mb-3">100</div>
                 <div class="text-lg font-semibold text-gray-700">معامله امن</div>
             </div>
             <div class="text-center">
-                <div class="text-6xl font-bold text-blue-600 mb-3">+۴۰۰</div>
+                <div id="demo4" class="text-6xl font-bold text-blue-600 mb-3">400</div>
                 <div class="text-lg font-semibold text-gray-700">معامله موفق</div>
             </div>
         </div>
@@ -316,7 +327,6 @@
 
 <section class="w-full bg-blue-800 py-16 px-4">
     <div class="container mx-auto">
-
         <div class="text-center mb-4">
             <h2 class="text-4xl font-semibold text-white mb-3">سوالات متداول</h2>
             <p class="text-blue-200 text-xl">هرچیزی که نیازه در مورد وامجو نیازه بدونی</p>
@@ -324,11 +334,10 @@
 
         <section class="max-w-3xl mx-auto px-4 py-16">
             <div class="space-y-4">
-
                 <div class="overflow-hidden">
                     <button type="button"
-                            class="faq-btn bg-transparent w-full cursor-pointer text-lg flex items-center justify-between p-5 text-gray-100 font-medium transition">
-                        <span>How do I create a short link ?</span>
+                            class="faq-btn bg-transparent w-full text-right cursor-pointer text-base md:text-lg flex gap-4 items-start justify-between p-5 text-gray-100 font-medium transition">
+                        <span>آیا میشود از این خراب شده وام گرفت و پس نداد؟</span>
 
                         <svg class="faq-icon size-4 text-gray-100" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 448 512">
@@ -362,10 +371,10 @@
 </section>
 
 <div class="container mx-auto p-4">
-    <h3 class="text-gray-800 text-center text-4xl font-semibold mb-4">قوانین وامجو</h3>
+    <h3 class="text-gray-800 text-center text-4xl font-semibold my-4">قوانین وامجو</h3>
 
     <div class="grid grid-cols-4 gap-8">
-        <div class="col-span-4 md:col-span-2">
+        <div class="col-span-4 md:col-span-2 p-3">
             Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget
             diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at
             diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis
@@ -376,7 +385,7 @@
             Ipsum sit mattis nulla quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque congue eget
             consectetur turpis. Sapien, dictum molestie sem tempor.
         </div>
-        <div class="col-span-4 md:col-span-2">
+        <div class="col-span-4 md:col-span-2 p-3">
             Sagittis et eu at elementum, quis in. Proin praesent volutpat egestas sociis sit lorem nunc nunc sit. Eget
             diam curabitur mi ac. Auctor rutrum lacus malesuada massa ornare et. Vulputate consectetur ac ultrices at
             diam dui eget fringilla tincidunt. Arcu sit dignissim massa erat cursus vulputate gravida id. Sed quis
@@ -393,12 +402,13 @@
 <div class="bg-gray-800 mt-32 px-8 relative">
     <div class="container bg-gray-50 flex-wrap shadow-xl mx-auto relative bottom-20 p-8 sm:p-12 rounded-2xl flex sm:items-center justify-center sm:justify-between">
         <div class="flex flex-col items-start">
-            <h3 class="text-3xl font-bold mb-2">قصد فروش امتیاز خود را دارید؟</h3>
-            <p class="text-gray-400 font-normal text-lg">با ثبت آگهی وام، کارشناسان وامجو در اولین فرصت شما را به
+            <h3 class="text-xl md:text-3xl font-bold mb-2">قصد فروش امتیاز خود را دارید؟</h3>
+            <p class="text-gray-400 font-normal text-sm text-justify md:text-lg">با ثبت آگهی وام، کارشناسان وامجو در
+                اولین فرصت شما را به
                 فروشندگان مطمئن
                 وصل خواهند کرد</p>
         </div>
-        <button class="btn text-sm whitespace-nowrap">ثبت آگهی</button>
+        <button class="btn max-md:mt-4 max-md:w-full text-sm whitespace-nowrap">ثبت آگهی</button>
     </div>
 </div>
 
@@ -442,6 +452,13 @@
 </footer>
 
 <script>
+    jQuery(document).ready(function () {
+        $('#demo1').countMe(10, 50)
+        $('#demo2').countMe(10, 50)
+        $('#demo3').countMe(10, 50)
+        $('#demo4').countMe(10, 50)
+    })
+
     const buttons = document.querySelectorAll('.faq-btn')
 
     buttons.forEach(button => {

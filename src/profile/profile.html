@@ -39,19 +39,21 @@
         </div>
     </nav>
 
-    <div class="h-60 w-full flex"></div>
+    <div class="min-h-60 w-full flex">
+
+    </div>
 
 </header>
 
 <main class="container mx-auto">
     <section class="relative bottom-40 px-4 space-y-8">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center justify-start gap-4">
-                <img src="./../assets/img/Melli.png" alt="Melli" class="size-16 max-md:size-12">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <img src="./../assets/img/aziziUI.png" alt="Melli"
+                     class="size-16 md:size-18 border border-gray-200 p-0.5 rounded-full"/>
                 <div class="flex flex-col items-start">
-                <span class="text-base text-gray-700">
-                    <b class="text-gray-800 text-3xl font-bold"> ۵۰،۰۰۰،۰۰۰ </b>تومان </span>
-                    <span class="font-normal text-gray-700 text-base">بانک ملی . ۲ روز پیش</span>
+                    <b class="text-gray-800 text-2xl font-bold">جواد جمشیدی قویدلان</b>
+                    <span class="font-normal text-gray-600 text-base">فروشنده شخمی</span>
                 </div>
             </div>
 
@@ -64,22 +66,24 @@
                     <img src="./../assets/img/bale.png" alt="Eitaa" class="size-4">
                 </button>
             </div>
-        </div>
 
-        <div class="py-4 swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
-                    <span class="text-gray-500 flex text-sm font-medium">موجودی امتیاز وام</span>
-                    <span class="text-gray-700 flex items-center text-2xl font-semibold"> ۳۲۹،۰۰۰،۰۰۰
+        </div>
+        <div class="overflow-hidden">
+            <div class="swiper">
+                <div class="swiper-wrapper py-2">
+                    <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
+                        <span class="text-gray-500 flex text-sm font-medium">موجودی امتیاز وام</span>
+                        <span class="text-gray-700 flex items-center text-2xl font-semibold"> ۳۲۹،۰۰۰،۰۰۰
                     <small class="text-sm text-gray-500 font-normal"> تومان </small></span>
-                </div>
-                <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
-                    <span class="text-gray-500 flex text-sm font-medium">معامله موفق</span>
-                    <span class="text-gray-700 flex items-center text-2xl font-semibold">+۶</span>
-                </div>
-                <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
-                    <span class="text-gray-500 flex text-sm font-medium">وام های ذخیره شده</span>
-                    <span class="text-gray-700 flex items-center text-2xl font-semibold">۳</span>
+                    </div>
+                    <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
+                        <span class="text-gray-500 flex text-sm font-medium">معامله موفق</span>
+                        <span class="text-gray-700 flex items-center text-2xl font-semibold">+۶</span>
+                    </div>
+                    <div class="swiper-slide col-span-4 p-6 rounded-lg space-y-2 shadow border-gray-200 bg-white">
+                        <span class="text-gray-500 flex text-sm font-medium">وام های ذخیره شده</span>
+                        <span class="text-gray-700 flex items-center text-2xl font-semibold">۳</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -195,6 +199,7 @@
                 <a href="./../loan/loan.html" class="btn text-sm w-full">مشاهده جزئیات</a>
             </div>
         </div>
+
     </section>
 
 </main>
@@ -202,9 +207,11 @@
     document.addEventListener("DOMContentLoaded", () => {
         new Swiper('.swiper', {
             speed: 400,
-            spaceBetween: 100,
+            spaceBetween: 20,
             breakpoints: {
-
+                768: {
+                    slidesPerView: 3
+                }
             }
         })
     });
